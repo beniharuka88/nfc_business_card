@@ -4,22 +4,49 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>nfc名刺</title>
+    <title>NFC名刺</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- ハンバーガーメニュー -->
+    <nav class="hamburger-menu">
+        <input type ="checkbox" id="menu-toggle">
+        <label for ="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class ="menu">
+            <!-- 閉じるボタン -->
+            <label for="menu-toggle" class="close-button">&times;</label>
+            <ul>
+                <li><a href="#about">最近の活動</a></li>
+                <li><a href="#skils">使用できる言語</a></li>
+                <li><a href="#skils2">保有資格</a></li>
+                <li><a href="#mypoint">特技</a></li>
+                <li><a href="#hobby">趣味</a></li>
+                <li><a href="#link">SNS</a></li>
+                <li><a href="#menber">制作メンバー</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- ヘッダー -->
     <header>
-        <h1>Kudo Taketo</h1><img src="hare.png">
+        <h1>Kudo Taketo</h1><img src="hare.png" alt="プロフィール画像">
         <p> 北海道科学大学 工学部 情報工学科</p>
+        <p> NFC名刺プロジェクト リーダー</p>
     </header>
 
+    <!-- セクション -->
     <section id="about">
         <h2>最近の活動</h2>
         <ul>
+            <li>大学のメンバー4人でnfcを使用した名刺を作成中</li>
+            <li>本来の実務を想定し開発を行うため、GitHubを使用しています。</li>
             <li>ローバースカウト部に所属し、日本赤十字社の献血促進ボランティアに参加。</li>
-            <li>ほかにも、モエレ沼公園花火大会や、よさこいソーランのイベントで運営ボランティアとして参加。</li>
+            <li>モエレ沼公園花火大会や、よさこいソーランのイベントで運営ボランティアとして参加。</li>
         </ul>
     </section>
 
@@ -31,17 +58,39 @@
         </ul>
     </section>
 
+    <section id="skils2">
+        <h2>保有資格</h2>
+        <ul>
+            <li>ITパスポート</li>
+        </ul>
+    </section>
+
     <section id="mypoint">
         <h2>特技</h2>
         <ul>
-            <li>特技 : スノーボード</li>
+            <li>スノーボード</li>
+            <li>パソコンいじり</li>
         </ul>
     </section>
 
     <section id="hobby">
         <h2>趣味</h2>
         <ul>
-            <li>趣味 : 映画鑑賞</li>
+            <li>映画・ドラマ鑑賞</li>
+            <ul>
+                <h2>好きな映画</h2>
+                <li>タイタニック</li>
+                <li>トップガン</li>
+                <li>マトリックス</li>
+                <li>レオン</li>
+                <li>マーベル作品など</li>
+            </ul>
+            <ul>
+                <h2>好きなドラマ</h2>
+                <li>ブレイキング・バッド</li>
+                <li>ストレンジャーシングス</li>
+                <li>Emily in the Parisなどなど</li>
+            </ul>
             <li>えっちなマンガをみんなの前で読む</li>
             <li>非常に興奮しますぅぅ！！</li>
             <li>おすすめ作品は<a
@@ -55,6 +104,18 @@
         <ul>
             <li>Instagram : <a href="https://www.Instagram.com/takeeeeto_">詳しく知りたい方はこちら</a></li>
             <li>Gmail : </li>
+        </ul>
+    </section>
+    
+
+
+    <section id="member">
+        <h2>制作メンバー</h2>
+        <ul>
+            <li>須藤 優一</li>
+            <li>本間 智樹</li>
+            <li>工藤 豪人</li>
+            <li>磯野 倫希</li>
         </ul>
     </section>
 
