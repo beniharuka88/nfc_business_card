@@ -2,7 +2,10 @@
 body{
     font-family: Arial,sans-serif;
     line-height : 1.6;
-    background-color: white;
+    background-image: url("stone.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color :#333;
     margin: 0;
     padding: 0;
@@ -26,31 +29,26 @@ body{
     height: 3px;
     background: #333;
     margin: 5px 0;
-    transition: 0.4s;
+    transition: 0.4s,opacity 0.4s;
 }
+
 
 #menu-toggle{
     display: none;
 }
 
-.menu{
-    display: none;
-    background: black;
-    position: absolute;
+.menu {
+    position: fixed; /* 画面に固定 */
     top: 0;
-    left: 0;
+    left: -200px; /* メニューを画面外に配置 */
     width: 200px;
     height: 100vh;
     padding-top: 60px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
-}
-.close-button {
-    position:absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
+    background: black;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease, opacity 0.3s ease; /* スライドのトランジション */
+    opacity: 0; /* 初期状態は透明 */
+    visibility: hidden; /* 初期状態は非表示 */
 }
 
 .menu ul{
@@ -65,15 +63,42 @@ body{
     text-decoration: none;
     font-size: 18px;
 }
-/*メニュー表示のトグル*/
 #menu-toggle:checked ~ .menu{
-    display: block;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+/*メニュー表示のトグル(開き)*/
+#menu-toggle:checked ~ .menu-icon span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+#menu-toggle:checked ~.menu-icon span:nth-child(2){
+    opacity: 0;
+}
+#menu-toggle:checked ~.menu-icon span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
 }
 
+/**/
 #menu-toggle:checked ~ .hamburger-menu {
     background: rgba(0, 0, 0, 0.7); /* 背景を暗くする */
 }
-
+.close-button {
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+/* ヘッダー */
+.img-hover{
+    /*拡大縮小を滑らかにする*/
+    transition: 0.7s ease-in-out;
+}
+.img-hover:hover{
+    transform: scale(1.1);
+}
 header {
     background-color: black;
     color: white;
@@ -118,6 +143,14 @@ html {
     align-items: center;
     z-index: 2;
 }
+/* ページトップに戻るボタンのホバーエフェクト */
+.pagetop:hover {
+    background: #333; /* 背景色を変更 */
+    color: #fff;      /* 文字色を変更 */
+    transform: scale(1.1); /* ボタンを拡大 */
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15 rgba(0, 0, 0, 0.2);
+}
 
 .pagetop__arrow {
     height: 10px;
@@ -140,4 +173,6 @@ footer{
         max-width: 800px;
     }
 }
+
+
 
