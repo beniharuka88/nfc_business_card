@@ -1,133 +1,160 @@
 @charset "UTF-8";
-body{
-    font-family: Arial,sans-serif;
-    line-height : 1.6;
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     background-image: url("stone.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color :#333;
+    color: #333;
     margin: 0;
     padding: 0;
 }
+
 /* ハンバーガーメニューのスタイル*/
-.hamburger-menu{
-    position:fixed;
+.hamburger-menu {
+    text-align: right;
+    position: fixed;
     top: 0;
-    left:0;
+    left: 0;
     z-index: 10;
 }
 
-.menu-icon{
-    display:inline-block;
-    cursor:pointer;
-    padding:1em;
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    padding: 1em;
 }
-.menu-icon span{
+
+.menu-icon span {
     display: block;
     width: 25px;
     height: 3px;
     background: #333;
     margin: 5px 0;
-    transition: 0.4s,opacity 0.4s;
+    transition: 0.4s, opacity 0.4s;
 }
 
 
-#menu-toggle{
+#menu-toggle {
     display: none;
 }
 
 .menu {
-    position: fixed; /* 画面に固定 */
+    position: fixed;
+    /* 画面に固定 */
     top: 0;
-    left: -200px; /* メニューを画面外に配置 */
+    left: -200px;
+    /* メニューを画面外に配置 */
     width: 200px;
     height: 100vh;
     padding-top: 60px;
     background: black;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-    transition: left 0.3s ease, opacity 0.3s ease; /* スライドのトランジション */
-    opacity: 0; /* 初期状態は透明 */
-    visibility: hidden; /* 初期状態は非表示 */
+    transition: left 0.3s ease, opacity 0.3s ease;
+    /* スライドのトランジション */
+    opacity: 0;
+    /* 初期状態は透明 */
+    visibility: hidden;
+    /* 初期状態は非表示 */
 }
 
-.menu ul{
+.menu ul {
     list-style: none;
     padding: 0;
 }
-.menu ul li{
+
+.menu ul li {
     padding: 15px 20px;
 }
-.menu ul li a{
-    color:white;
+
+.menu ul li a {
+    color: white;
     text-decoration: none;
     font-size: 18px;
 }
-#menu-toggle:checked ~ .menu{
+
+#menu-toggle:checked~.menu {
     left: 0;
     opacity: 1;
     visibility: visible;
 }
+
 /*メニュー表示のトグル(開き)*/
-#menu-toggle:checked ~ .menu-icon span:nth-child(1){
+#menu-toggle:checked~.menu-icon span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
-#menu-toggle:checked ~.menu-icon span:nth-child(2){
+
+#menu-toggle:checked~.menu-icon span:nth-child(2) {
     opacity: 0;
 }
-#menu-toggle:checked ~.menu-icon span:nth-child(3){
+
+#menu-toggle:checked~.menu-icon span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
 
 /**/
-#menu-toggle:checked ~ .hamburger-menu {
-    background: rgba(0, 0, 0, 0.7); /* 背景を暗くする */
+#menu-toggle:checked~.hamburger-menu {
+    background: rgba(0, 0, 0, 0.7);
+    /* 背景を暗くする */
 }
+
 .close-button {
-    position:absolute;
+    position: absolute;
     top: 10px;
     right: 10px;
     font-size: 24px;
     color: white;
     cursor: pointer;
 }
+
 /* ヘッダー */
-.img-hover{
+.img-hover {
     /*拡大縮小を滑らかにする*/
     transition: 0.7s ease-in-out;
 }
-.img-hover:hover{
+
+.img-hover:hover {
     transform: scale(1.1);
 }
+
 header {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 1em 0; 
-    margin-top: 50px; /* ハンバーガーメニューと調整が必要の可能性あり*/
+    padding: 1em 0;
+    margin-top: 50px;
+    /* ハンバーガーメニューと調整が必要の可能性あり*/
 }
 
-header img{
+header img {
     width: 150px;
     height: auto;
 }
 
-section{
-    padding:20px;
-    margin:20px auto;
+section {
+    padding: 20px;
+    margin: 20px auto;
     max-width: 800px;
-    background-color: #f9f9f9; /* 背景色追加 */
-    border-radius: 8px; /* 角を丸く */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ボックスシャドウ */
+    background-color: #f9f9f9;
+    /* 背景色追加 */
+    border-radius: 8px;
+    /* 角を丸く */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* ボックスシャドウ */
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
-    color: #ffcc00; /* ホバー時に色を変える */
+    color: #ffcc00;
+    /* ホバー時に色を変える */
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 /*ページトップに戻るボタン*/
 .pagetop {
     height: 50px;
@@ -143,11 +170,15 @@ html {
     align-items: center;
     z-index: 2;
 }
+
 /* ページトップに戻るボタンのホバーエフェクト */
 .pagetop:hover {
-    background: #333; /* 背景色を変更 */
-    color: #fff;      /* 文字色を変更 */
-    transform: scale(1.1); /* ボタンを拡大 */
+    background: #333;
+    /* 背景色を変更 */
+    color: #fff;
+    /* 文字色を変更 */
+    transform: scale(1.1);
+    /* ボタンを拡大 */
     transition: background 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 15 rgba(0, 0, 0, 0.2);
 }
@@ -159,20 +190,19 @@ html {
     border-right: 3px solid #000;
     transform: translateY(20%) rotate(-45deg);
 }
+
 /* フッター */
-footer{
+footer {
     text-align: center;
     padding: 1em 0;
     background-color: #333;
     color: white;
 }
-@media (max-width: 600px){
-    section{
+
+@media (max-width: 600px) {
+    section {
         padding: 10px;
-        margin: 10px ;
+        margin: 10px;
         max-width: 800px;
     }
 }
-
-
-
