@@ -49,6 +49,7 @@ body {
 }
 
 .menu {
+    float: right;
     position: fixed;
     /* 画面に固定 */
     top: 0;
