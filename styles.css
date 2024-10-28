@@ -12,13 +12,20 @@ body {
     padding: 0;
 }
 
-/* ハンバーガーメニューのスタイル*/
-.hamburger-menu {
-    float: right;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
+@media screen and (max-width:767px) {
+    body {
+        min-width: 375px;
+        margin: 0;
+    }
+
+    #nav-pc {
+        display: none;
+    }
+
+    #menu-sp {
+        float: right;
+        padding: 0;
+    }
 }
 
 .menu-icon {
